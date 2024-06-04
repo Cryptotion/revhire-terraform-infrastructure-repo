@@ -4,23 +4,22 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/david-r-martinez/rev-hire-backend.git'
+                echo 'Cloning...'
             }
         }
         stage('Build') {
             steps {
-                sh 'terraform init'
-                sh 'terraform apply -auto-approve'
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "No tests defined yet"'
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "No deployment defined yet"'
+                echo 'Deploying...'
             }
         }
     }
